@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BERANDA -->
+    <section id="beranda">
+
+        <nav>
+            <div>Beranda</div>
+
+            <div class="menu-nav">
+                <a href="#">Beranda</a>
+                <a href="#">Modul</a>
+            </div>
+        </nav>
+
+        <div class="home-content">
+
+            <h1>EduMart</h1>
+
+            <button onclick="showPage('input-siswa')" class="menu-btn">
+                Input Data Siswa
+            </button>
+
+           <button onclick="showPage('monitoring')" class="menu-btn">
+                  Monitoring
+            </button>
+
+            <button onclick="showPage('pembelajaran')" class="menu-btn">
+                 Pembelajaran
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- INPUT SISWA -->
+    <section id="input-siswa" class="hidden">
+
+        <button class="back-btn"
+                onclick="showPage('beranda')">
+            ↩
+        </button>
+
+        <div class="input-container">
+
+            <h1>Input siswa</h1>
+
+            <form id="studentForm">
+
+                <label>Nama siswa</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama murid"
+                >
+
+                <label>Kelas</label>
+
+                <input
+                    type="text"
+                    id="kelas"
+                >
+
+                <button type="submit"
+                        class="save-btn">
+                    Simpan
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<section id="monitoring" class="hidden">
+
+    <button class="back-btn"
+            onclick="showPage('beranda')">
+        ↩
+    </button>
+
+    <div class="monitoring-container">
+
+        <h1>Monitoring</h1>
+
+        <button class="menu-btn"
+                onclick="showPage('ringkasan-kelas')">
+            Ringkasan Penilaian
+        </button>
+
+        <button class="menu-btn"
+                onclick="showPage('monitoring-individu')">
+            Monitoring Individu
+        </button>
+
+    </div>
+
+</section>
+
+<section id="ringkasan-kelas" class="hidden">
+
+    <button class="back-btn"
+            onclick="showPage('monitoring')">
+        ↩
+    </button>
+
+    <div class="monitoring-container">
+
+        <h1>Ringkasan Kelas</h1>
+
+        <select id="pertemuanKelas">
+
+            <option value="">
+                Pilih Pertemuan
+            </option>
+
+            <option value="1">
+                Pertemuan 1
+            </option>
+
+            <option value="2">
+                Pertemuan 2
+            </option>
+
+            <option value="3">
+                Pertemuan 3
+            </option>
+
+            <option value="4">
+                Pertemuan 4
+            </option>
+
+        </select>
+
+        <div id="hasilKelas">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="monitoring-individu" class="hidden">
+
+    <button class="back-btn"
+            onclick="showPage('monitoring')">
+        ↩
+    </button>
+
+    <div class="monitoring-container">
+
+        <h1>Monitoring Individu</h1>
+
+        <input
+            type="text"
+            placeholder="Nama murid"
+            id="namaMonitoring"
+        >
+
+        <select id="pertemuanIndividu">
+
+            <option value="">
+                Pilih Pertemuan
+            </option>
+
+            <option value="1">
+                Pertemuan 1
+            </option>
+
+            <option value="2">
+                Pertemuan 2
+            </option>
+
+            <option value="3">
+                Pertemuan 3
+            </option>
+
+            <option value="4">
+                Pertemuan 4
+            </option>
+
+        </select>
+
+        <div id="hasilIndividu">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="pembelajaran" class="hidden">
+
+    <button class="back-btn"
+            onclick="showPage('beranda')">
+        ↩
+    </button>
+
+    <div class="monitoring-container">
+
+        <h1>Pilih Pertemuan</h1>
+
+        <button onclick="showPage('pertemuan1')" class="menu-btn">
+    Pertemuan 1
+</button>
+
+        <button class="menu-btn"
+                onclick="showPage('pertemuan2')">
+            Pertemuan 2
+        </button>
+
+        <button class="menu-btn"
+                onclick="showPage('pertemuan3')">
+            Pertemuan 3
+        </button>
+
+        <button class="menu-btn"
+                onclick="showPage('pertemuan4')">
+            Pertemuan 4
+        </button>
+
+    </div>
+
+</section>
+
+<section id="pertemuan1" class="hidden">
+
+    <button class="back-btn"
+            onclick="showPage('pembelajaran')">
+        ↩
+    </button>
+
+    <div class="monitoring-container">
+
+        <h1>Pertemuan 1</h1>
+
+        <h3 class="subtitle">
+            Pengenalan Mata Uang
+        </h3>
+
+        <button class="menu-btn"
+                onclick="showPage('materi1')">
+            Materi
+        </button>
+
+        <button class="menu-btn"
+                onclick="showPage('eksplorasi1')">
+            Eksplorasi
+        </button>
+
+        <button class="menu-btn"
+                onclick="showPage('evaluasi1')">
+            Evaluasi
+        </button>
+
+    </div>
+
+</section>
