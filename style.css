@@ -177,3 +177,36 @@ input{
 
     padding:0 15px;
 }
+.materi-img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.prev-btn,
+.next-btn{
+    position: absolute;
+    top: 30px;
+
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f4b400;
+    color: white;
+
+    font-size: 40px;
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+.prev-btn{
+    left: 30px;
+}
+
+.next-btn{
+    right: 30px;
+}
